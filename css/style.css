@@ -42,7 +42,7 @@ a {
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.733)),
+  background-image: linear-gradient(rgba(233, 65, 65, 0.849), rgba(0, 0, 0, 0.733)),
     url(../images/DSC_7111.jpg);
   background-position: center;
   background-size: cover;
@@ -77,7 +77,7 @@ a {
 
 /* Styling for card image */
 .card__img {
-  width: 328px;
+  width: 468px;
   border-radius: 1.5rem;
 }
 
