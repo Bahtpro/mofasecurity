@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Icon of web -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+     src="images/logo.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./icons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./icons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./icons/favicon.ico" />
+
+    <!-- The title of the web -->
+    <title>Mofa Security Solutions</title>
+      <style>
+    /* Style for the rotating text section */
+    #rotating-text-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f8f8;
+    }
+
+    #rotating-text {
+      color: rgb(0, 255, 255);
+      font-family: 'Dancing Script', cursive;
+      font-size: 1em;
+      font-weight: normal;
+      border-right: 1px solid orange;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="banner">
+      <!-- Navigation bar -->
+      <nav
+        class="navbar fixed-top navbar-expand-lg wow fadeInDown"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <!-- Brand logo and name -->
+          <a class="navbar-brand" href="#"
+            ><span
+              class="fw-semibold font-monospace"
+              style="color: rgba(206, 245, 252, 255)"
+              ><img src="images/logo.png" alt="Mofa Logo" /></span
+            >
+            <span class="sec-logo">Mofa Security Services Ltd</span></a
+          >
+          <!-- Navbar toggler for mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contant">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Header text with buttons -->
+      <div class="header-text text-white wow fadeInLeft">
+  <p>"Staying Ahead of Threats to Keep You Safe"</p>
+  <h2>
+    With Our Dynamic <br />Security Solutions like
+    <span id="rotating-text"></span>
+  </h2>
+  <a class="btn bg-info-subtle me-3" href="#about">Read More</a>
+  <a class="btn bg-info-subtle me-3" data-bs-theme="dark" href="#contant">Contact Us</a>
+</div>
+
+    </header>
+<!-- Rotating Text Section -->
+  <section id="rotating-text-section">
+    <span id="rotating-text"></span>
+  </section>
+
+  <!-- Typing Script -->
+  <script>
+    const phrases = [
+      "Manned guarding (residential, commercial, industrial)",
+      "Alarm systems and rapid response",
+      "Executive protection and VIP escort",
+      "Event security and crowd control",
+      "CCTV surveillance (installation and monitoring)",
+      "Secure Access Management"
+    ];
+
+    const textElement = document.getElementById("rotating-text");
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      const currentText = currentPhrase.substring(0, charIndex);
+
+      textElement.textContent = currentText;
+
+      if (!isDeleting && charIndex < currentPhrase.length) {
+        charIndex++;
+        setTimeout(type, 100); // typing speed
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 50); // deleting speed
+      } else {
+        isDeleting = !isDeleting;
+
+        if (!isDeleting) {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+        }
+
+        setTimeout(type, 1000); // pause before typing or deleting
+      }
+    }
+
+    // Start the typing effect
+    type();
+  </script>
+
+    <!-- About section -->
+    <section class="py-5 about" id="about">
+      <div class="container">
+        <div class="row">
+          <!-- About image -->
+          <div class="col-md-4 wow fadeInLeft">
+            <img src="./images/DSC_6939.jpg" class="w-100 h-100" />
+          </div>
+          <!-- About text -->
+          <div class="col-md-8 about-title wow fadeInRight">
+            <h5 class="text-info" style="letter-spacing: 3px">ABOUT US</h5>
+            <h3>MOFA SECURITY SERVICES LTD: Your Home and Business Security Experts</h3>
+            <p style="margin-top: 20px">
+             Mofa Security Services Ltd is a fully licensed private security company 
+             committed to safeguarding life and property. We provide professional security
+              solutions including manned guarding, access control, and surveillance services.
+               Our team is trained to handle diverse security needs with integrity, reliability,
+                and efficiency—ensuring peace of mind for our clients across residential, commercial,
+                 and institutional settings.
+            </p>
+            <!-- Points of expertise -->
+            <div class="d-flex">
+              <div
+                class="bg-info p-3 me-3 text-center text-white border-bottom border-dark border-3"
+              >
+                <i class="fa-solid fa-star fa-3x mb-2"></i>
+                <h6>15 Years' experience</h6>
+              </div>
+              <div
+                class="bg-dark p-3 me-3 text-center text-white border-bottom border-info border-3"
+              >
+                <i class="fa-solid fa-people-group fa-3x mb-2"></i>
+                <h6>Experienced Team</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="py-5 service" id="service">
+      <div class="service-title wow fadeInUp">
+        <h5
+          class="text-center text-info services-title"
+          style="letter-spacing: 3px"
+        >
+          OUR SERVICES
+        </h5>
+        <h4 class="display-4 fw-bold text-center">
+          We provide high-quality security services tailored to your needs.
+        </h4>
+      </div>
+      <!-- Service cards -->
+      <div class="card__container">
+        <!-- Service Card 1 -->
+        <article class="card__article">
+          <img src="./images/DSC_7092.jpg" alt="image" class="card__img" />
+
+          <div class="card__data">
+            <span class="card__description">Number One</span>
+            <h2 class="card__title">Manned Guarding Services</h2>
+            <a class="card__button text-info openModal" id="openModal-1"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Modal for service details -->
+        <div id="myModal-1" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title text-info">
+                <i class="fa-solid fa-building-shield"></i> Manned Guarding Services
+              </h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>
+                At Mofa Security Services Ltd, we provide professional Manned Guarding Services 
+                tailored to meet the unique security needs of our clients. Our team of well-trained,
+                 licensed, and uniformed guards is deployed to various locations including residential 
+                 estates, commercial buildings, construction sites, schools, hospitals, and industrial 
+                 facilities. They are responsible for duties such as controlling access, conducting 
+                 perimeter patrols, managing visitors, and responding to incidents promptly 
+                 and effectively. With a strong physical presence and a commitment to professionalism,
+                  our guards serve as a powerful deterrent to crime, ensuring a safe and secure 
+                  environment for your people and property—24 hours a day, 7 days a week.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <article class="card__article">
+          <img src="./images/rtyuh.jpg" alt="image" class="card__img" />
+
+          <div class="card__data">
+            <span class="card__description">Number Two</span>
+            <h2 class="card__title">Event Security Management</h2>
+            <a class="card__button text-info openModal" id="openModal-2"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Modal for service details -->
+        <div id="myModal-2" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title text-info">
+                <i class="fa-solid fa-hand-holding-dollar"></i> Event Security Management
+              </h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>
+                At Mofa Security Services Ltd, we offer reliable and comprehensive 
+                Event Security Management services to ensure the safety and smooth 
+                operation of all types of events. Whether it's a corporate gathering,
+                 concert, private party, sporting event, political rally, or public celebration,
+                  our experienced security personnel are trained to manage crowds, control access 
+                  points, monitor for suspicious activity, and respond swiftly to any incidents.
+                   We conduct thorough risk assessments prior to the event and work closely with 
+                   organizers to develop a customized security plan. Our goal is to provide a 
+                   secure environment where guests feel safe and your event runs without disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <article class="card__article">
+          <img src="./images/DSC_6994.jpg" alt="image" class="card__img" />
+
+          <div class="card__data">
+            <span class="card__description">Number Three</span>
+            <h2 class="card__title">Mobile Patrol Services</h2>
+            <a class="card__button text-info openModal" id="openModal-3"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Modal for service details -->
+        <div id="myModal-3" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title text-info">
+                <i class="fa-solid fa-screwdriver-wrench"></i> Mobile Patrol Services
+              </h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>
+                At Mofa Security Services Ltd, we provide efficient and proactive Mobile
+                 Patrol Services to safeguard properties that require flexible and dynamic 
+                 security coverage. Our marked patrol vehicles and trained security officers 
+                 conduct scheduled and random patrols across residential areas, business premises,
+                  industrial parks, schools, and other sensitive locations. These patrols serve as 
+                  a visible deterrent to criminal activity and allow for quick detection of any 
+                  unusual or unauthorized behavior. Our officers are equipped to respond to alarms,
+                   perform perimeter checks, and ensure that all access points remain secure. Whether
+                    it's day or night, our mobile patrol teams deliver consistent, responsive
+                     protection for clients who need peace of mind without the need for a full-time
+                      guard on-site.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <article class="card__article">
+          <img src="./images/yhtujj.png" alt="image" class="card__img" />
+
+          <div class="card__data">
+            <span class="card__description">Number Four</span>
+            <h2 class="card__title">Guard Dog & Handler Services</h2>
+            <a class="card__button text-info openModal" id="openModal-4"
+              >Read More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Modal for service details -->
+        <div id="myModal-4" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title text-info">
+                <i class="fa-solid fa-eye"></i> Guard Dog & Handler Services
+              </h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <p>
+                At Mofa Security Services Ltd, we offer specialized Guard Dog & Handler 
+                Services to provide an added layer of protection for your property and 
+                assets. Our highly trained security dogs, accompanied by professional
+                 handlers, are deployed to deter and detect potential intruders, making 
+                 them ideal for securing large estates, warehouses, industrial sites, farms,
+                  and construction areas. The combination of canine instincts and handler 
+                  expertise ensures rapid response to threats and enhances perimeter security, 
+                  especially during night hours or in high-risk environments. This service not 
+                  only acts as a powerful deterrent but also provides peace of mind through
+                   effective, reliable, and intelligent protection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Price section -->
+
+
+    <!-- Team section -->
+    <section class="team-container section-bg" id="team">
+      <!-- Container for team members -->
+      <div class="container" data-aos="fade-up">
+        <!-- Section title -->
+        <div class="section-title wow fadeInUp">
+          <!-- Title for the team section -->
+      
+          <!-- Subtitle for the team section -->
+          <h4 class="display-4 fw-bold text-center mb-4">
+            Our Clients
+          </h4>
+        </div>
+        <!-- Row for team members -->
+        <div class="row">
+          <!-- First team member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <!-- Member details -->
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <!-- Member image -->
+              <div class="member-img">
+                <img src="./images/precious.jpg" class="img-fluid" alt="image" />
+                <!-- Social links -->
+                <div class="social">
+                  <a><i class="fa-brands fa-x-twitter"></i></a>
+                  <a><i class="fa-brands fa-facebook"></i></a>
+                  <a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Member information -->
+                <div class="member-info">
+                  <!-- Member name -->
+                  <h4>Precious Gardens</h4>
+                  <!-- Member role -->
+                  <span>Riruta</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Second team member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <!-- Member details -->
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <!-- Member image -->
+              <div class="member-img">
+                <img src="./images/logo3.jpg" class="img-fluid" alt="image" />
+                <!-- Social links -->
+                <div class="social">
+                  <a><i class="fa-brands fa-x-twitter"></i></a>
+                  <a><i class="fa-brands fa-facebook"></i></a>
+                  <a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Member information -->
+                <div class="member-info">
+                  <!-- Member name -->
+                  <h4>Tifa Research</h4>
+                  <!-- Member role -->
+                  <span> Lavington</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Third team member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <!-- Member details -->
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <!-- Member image -->
+              <div class="member-img">
+                <img src="./images/telagen copy.jpg" class="img-fluid" alt="image" />
+                <!-- Social links -->
+                <div class="social">
+                  <a><i class="fa-brands fa-x-twitter"></i></a>
+                  <a><i class="fa-brands fa-facebook"></i></a>
+                  <a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Member information -->
+                <div class="member-info">
+                  <!-- Member name -->
+                  <h4>Telagen Gardens</h4>
+                  <!-- Member role -->
+                  <span>Lavington </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fourth team member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <!-- Member details -->
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <!-- Member image -->
+              <div class="member-img">
+                <img src="./images/JF.jpg" class="img-fluid" alt="image" />
+                <!-- Social links -->
+                <div class="social">
+                  <a><i class="fa-brands fa-x-twitter"></i></a>
+                  <a><i class="fa-brands fa-facebook"></i></a>
+                  <a><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!-- Member information -->
+                <div class="member-info">
+                  <!-- Member name -->
+                  <h4>JF Centre</h4>
+                  <!-- Member role -->
+                  <span>Opposite Nairobi Hospital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial section -->
+    <section class="testimonial" id="testimonial">
+      <!-- The tiltle Of Testimonial section -->
+      <div class="section-title wow fadeInUp">
+        <h5
+          class="text-center text-info services-title"
+          style="letter-spacing: 3px"
+        >
+          TESTIMONIAL
+        </h5>
+        <h4 class="display-4 fw-bold text-center mb-4">
+          What People Say About Out Services
+        </h4>
+      </div>
+      <!-- Container for testimonials -->
+      <div class="testi-container">
+        <!-- Swiper slider for testimonials -->
+        <div class="swiper mySwiper wow fadeInUp">
+          <div class="swiper-wrapper">
+            <!-- First testimonial slide -->
+            <div class="swiper-slide">
+              <!-- Testimonial image -->
+              <img
+                src="./images/,,,"
+                alt="image"
+                class="testi-image"
+              />
+              <!-- Testimonial text -->
+              <p>
+               "Mofa Security Services Ltd has been our trusted security 
+               partner for over two years. Their manned guards are professional, 
+               vigilant, and always present a strong security presence. We feel safe 
+               knowing they’re watching over our premises around the clock."
+              </p>
+              <!-- Quotation icon -->
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <!-- Testimonial details -->
+              <div class="testi-details">
+                <!-- Testimonial author -->
+                <span class="name">Anonymus</span>
+                <!-- Testimonial job title -->
+                <span class="jop">Small Business Owner</span>
+              </div>
+            </div>
+            <!-- Second testimonial slide -->
+            <div class="slide swiper-slide">
+              <!-- Testimonial image -->
+              <img
+                src="./images/,,,,,"
+                alt="image"
+                class="testi-image"
+              />
+              <!-- Testimonial text -->
+              <p>
+                "Their mobile patrol teams respond promptly and keep our commercial
+                 property secure. The combination of regular and random patrols by 
+                 Mofa’s officers has significantly reduced security incidents in our area.
+                  Highly recommended!"
+              </p>
+              <!-- Quotation icon -->
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <!-- Testimonial details -->
+              <div class="testi-details">
+                <!-- Testimonial author -->
+                <span class="name">Anonymus</span>
+                <!-- Testimonial job title -->
+                <span class="jop">Office Manager</span>
+              </div>
+            </div>
+            <!-- Third testimonial slide -->
+            <div class="slide swiper-slide">
+              <!-- Testimonial image -->
+              <img
+                src="./images/banner.jpg"
+                alt="image"
+                class="testi-image"
+              />
+              <!-- Testimonial text -->
+              <p>
+                "We hired Mofa Security’s Guard Dog & Handler services for our 
+                warehouse, and the results have been outstanding. The dogs and handlers are
+                 well-trained, professional, and extremely effective in deterring unauthorized access."
+              </p>
+              <!-- Quotation icon -->
+              <i class="fa-solid fa-quote-left quote-icon"></i>
+              <!-- Testimonial details -->
+              <div class="testi-details">
+                <!-- Testimonial author -->
+                <span class="name">Michael Rodriguez</span>
+                <!-- Testimonial job title -->
+                <span class="jop">Barber</span>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation arrows for testimonial slider -->
+          <div class="swiper-button-next text-info"></div>
+          <div class="swiper-button-prev text-info"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact-section wow fadeInUp" id="contant">
+      <!-- Container for contact section -->
+      <div class="container">
+        <div class="row">
+          <!-- Contact form -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="contact-form">
+              <!-- Contact form header -->
+              <div class="contact-header">
+                <!-- Title for contact section -->
+                <h5
+                  class="text-center text-info services-title"
+                  style="letter-spacing: 3px"
+                >
+                  CONTACT US
+                </h5>
+                <!-- Subtitle for contact section -->
+                <h4 class="display-7 fw-bold text-center mb-4">
+                  We'd love to hear from you
+                </h4>
+              </div>
+              <!-- Form for contacting -->
+           <!-- Your form here -->
+<form id="contactForm">
+  <div class="form-group mb-2">
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Your Name"
+      required
+    />
+  </div>
+  <div class="form-group mb-2">
+    <textarea
+      class="form-control"
+      id="message"
+      rows="5"
+      placeholder="Your Message"
+      required
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary submit-btn" onclick="sendEmail()">
+      Send Message
+    </button>
+  </div>
+</form>
+
+<script>
+  function sendEmail() {
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !message) {
+      alert("Please fill in both Name and Message fields.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Message from " + name);
+    const body = encodeURIComponent(`Name: ${name}\n\n${message}`);
+    const recipient = "moafasecurity@gmail.com";
+
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+
+    window.open(mailtoLink, '_blank');
+  }
+</script>
+
+<!-- Contact options -->
+<div style="margin-top: 20px; font-family: Arial, sans-serif;">
+  <div style="display: flex; align-items: center; margin-bottom: 12px; cursor: pointer;" onclick="openWhatsApp()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 8px;" />
+    <span style="color: #25D366; font-weight: 600;">Contact us via WhatsApp</span>
+  </div>
+  <div style="display: flex; align-items: center; cursor: pointer;" onclick="callUs()">
+    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Call" style="width: 24px; height: 24px; margin-right: 8px;" />
+    <span style="color: #000; font-weight: 600;">Call us</span>
+  </div>
+</div>
+
+<script>
+  const phoneNumber = "0757599159";
+
+  function openWhatsApp() {
+    // Use WhatsApp API URL to open chat with this number (include country code if needed)
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappUrl, "_blank");
+  }
+
+  function callUs() {
+    // Open phone dialer on supported devices
+    window.location.href = `tel:${phoneNumber}`;
+  }
+</script>
+
+
+            </div>
+          </div>
+          <!-- Contact shape -->
+          <div class="col-lg-6 container-contact-shape">
+            <div class="contact-shape">
+              <div class="contact-square"></div>
+              <div class="contact-img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Embedded Google Map -->
+<section id="map" class="wow fadeInUp" style="padding: 40px 0; background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4 text-info" style="letter-spacing: 2px;">Our Location</h2>
+    <div class="map-responsive" style="overflow: hidden; padding-bottom: 56.25%; position: relative; height: 0;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7892874239255!2d36.7825749!3d-1.3013228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f118d0939c6bf%3A0xd080262a4acee3ff!2sMOFA%20SECURITY%20SERVICES%20LTD!5e0!3m2!1sen!2ske!4v1750158852769!5m2!1sen!2ske"
+        style="border:0; position:absolute; top:0; left:0; width:100%; height:100%;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer section -->
+    <footer class="bg-dark text-white pt-5 pd-4 wow fadeInUp">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <!-- Company information -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="text-uppercase mb-4 font-weight-bold text-info"
+              style="letter-spacing: 3px"
+            >
+              Mofa Security
+            </h5>
+            <p>
+              Mofa Security Services Ltd is a licensed private security company in Kenya, offering services such as manned guarding, CCTV surveillance, and risk management. It serves both corporate and residential clients and is registered under the Private Security Regulatory Authority (PSRA). The company is known for professionalism and customized security solutions.
+            </p>
+          </div>
+          <!-- Menu links -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="text-uppercase mb-4 font-weight-bold text-info"
+              style="letter-spacing: 3px"
+            >
+              Menu
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none"
+                >Home</a
+              >
+            </p>
+            <p>
+              <a href="#about" class="text-white" style="text-decoration: none"
+                >About</a
+              >
+            </p>
+            <p>
+              <a
+                href="#service"
+                class="text-white"
+                style="text-decoration: none"
+                >Services</a
+              >
+            </p>
+            <p>
+              <a href="#team" class="text-white" style="text-decoration: none"
+                >Team</a
+              >
+            </p>
+            <p>
+              <a
+                href="#testimonial"
+                class="text-white"
+                style="text-decoration: none"
+                >Testimonial</a
+              >
+            </p>
+            <p>
+              <a
+                href="#contant"
+                class="text-white"
+                style="text-decoration: none"
+                >Contact</a
+              >
+            </p>
+          </div>
+          <!-- Services offered -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5
+              class="text-uppercase mb-4 font-weight-bold text-info"
+              style="letter-spacing: 3px"
+            >
+              Services
+            </h5>
+            <p class="text-white">Manned Guarding (Static Security)</p>
+            <p class="text-white">
+              Event Security Management
+            </p>
+            <p class="text-white"> Escort Services (Cash-In-Transit & VIP Protection)</p>
+            <p class="text-white">
+              Guard Dog & Handler Services
+            </p>
+          </div>
+          <!-- Contact information -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5
+              class="text-uppercase mb-4 font-weight-bold text-info"
+              style="letter-spacing: 3px"
+            >
+              Contact
+            </h5>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> Nairobi, Kenya
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +254712345678</p>
+            <p>
+              <i class="fa-solid fa-envelope"></i> info@mofasecurity.com
+            </p>
+            <div id="contactContainer" style="margin-top: 20px; font-family: Arial, sans-serif;">
+  <div
+    id="whatsappContact"
+    style="display: flex; align-items: center; margin-bottom: 12px; cursor: pointer;"
+    onclick="openWhatsApp()"
+  >
+    <img
+      src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+      alt="WhatsApp"
+      style="width: 24px; height: 24px; margin-right: 8px;"
+    />
+    <span style="color: #25D366; font-weight: 600;">Contact us via WhatsApp</span>
+  </div>
+
+  <div
+    id="callContact"
+    style="display: flex; align-items: center; cursor: pointer;"
+    onclick="callUs()"
+  >
+    <img
+      src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+      alt="Call"
+      style="width: 24px; height: 24px; margin-right: 8px;"
+    />
+    <span style="color: white; font-weight: 600;">Call us</span>
+  </div>
+</div>
+
+<script>
+  // Use the same phoneNumber variable as above to avoid redeclaration
+
+  function openWhatsApp() {
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappUrl, "_blank");
+  }
+
+  function callUs() {
+    window.location.href = `tel:${phoneNumber}`;
+  }
+</script>
+
+          </div>
+        </div>
+        <!-- Horizontal line -->
+        <hr class="mb-4" />
+        <div class="row align-items-center">
+          <!-- Copyright notice -->
+          <div class="col-md-7 col-lg-8">
+            <p>
+              &copy; <strong class="text-info">Mofa Security Services Ltd 2025</strong>. All
+              rights reserved.
+            </p>
+          </div>
+          <!-- Social media links -->
+          <div class="col-md-5 col-lg-4">
+            <div class="text-center text-md-end">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    class="btn-floating btn-sm text-white"
+                    style="font-size: 23px"
+                  >
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript imports and script initialization -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/typed.umd.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      // Initialize WOW.js for animations
+      new WOW().init();
+
+      // Initialize Typed.js for typing animation
+      var typed = new Typed("#typing", {
+        strings: [
+          "Security risk assessments",
+          "Sale and installation of <br> security systems",
+          "Security system maintenance",
+          "24/7 monitoring of <br> Alarm systems and CCTV footage",
+        ],
+        typeSpeed: 40,
+        backSpeed: 0,
+        backDelay: 2000,
+        cursorChar: "|",
+        loop: true,
+      });
+
+      // Initialize Swiper.js for testimonial slider
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
